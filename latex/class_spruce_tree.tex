@@ -1,0 +1,113 @@
+\doxysection{Spruce\+Tree Class Reference}
+\hypertarget{class_spruce_tree}{}\label{class_spruce_tree}\index{SpruceTree@{SpruceTree}}
+Inheritance diagram for Spruce\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_spruce_tree}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spruce_tree_ae162b2e6bb75c7f1e4f5fe4a2a23abcd}\label{class_spruce_tree_ae162b2e6bb75c7f1e4f5fe4a2a23abcd} 
+{\bfseries Spruce\+Tree} (std\+::string plant\+Name, std\+::string size, int amount\+Harvest, std\+::string name)
+\item 
+void \mbox{\hyperlink{class_spruce_tree_aaad971a9f97a014001bd467e717069cd}{Print\+Plant}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_spruce_tree_a531d378b6c6fdd28c34086f6f00b6ec4}{Get\+Name}} ()
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ \mbox{\hyperlink{class_spruce_tree_a4e17bc02c4724ccf68f8ddc6b68b90f4}{Get\+Harvest\+Cone}} () override
+\begin{DoxyCompactList}\small\item\em метод для сбора урожая определяет количество плодов на растении, затем уменьшает его и возвращает указатель std\+::unique\+\_\+ptr$<$\+Cone$>$ на объект плода если количество плодов на растении больше нуля, в противном случает возвращает нулевой указатель. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ \mbox{\hyperlink{class_spruce_tree_a906119ff5558451d9e50963222556625}{Get\+Harvest\+Apple}} ()
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ \mbox{\hyperlink{class_spruce_tree_aa3ce95356a4e4973f1fc23fa074bae25}{Get\+Harvest\+Peach}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Plant} (const std\+::string \&plant\+Name, const std\+::string \&size, int amount\+Harvest)
+\item 
+{\bfseries Plant} (const \mbox{\hyperlink{class_plant}{Plant}} \&plant)
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{Get\+Plant\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{Get\+Size\+Of\+Plant}} ()
+\item 
+int \& \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{Get\+Amount\+Of\+Harvest}} ()
+\item 
+virtual void \mbox{\hyperlink{class_plant_adbe60c4731a8baa0b3c3c3ce798857d2}{Print\+Plant}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ \mbox{\hyperlink{class_plant_a4f544a03facfb58cee5b01375ba149f6}{Get\+Harvest\+Apple}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ \mbox{\hyperlink{class_plant_a4c863577ad427722e19365bedde05824}{Get\+Harvest\+Peach}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ \mbox{\hyperlink{class_plant_ab3de3f15912d4cef1bf3fbafcf7b7be8}{Get\+Harvest\+Cone}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spruce_tree_a906119ff5558451d9e50963222556625}\label{class_spruce_tree_a906119ff5558451d9e50963222556625} 
+\index{SpruceTree@{SpruceTree}!GetHarvestApple@{GetHarvestApple}}
+\index{GetHarvestApple@{GetHarvestApple}!SpruceTree@{SpruceTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestApple()}{GetHarvestApple()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ Spruce\+Tree\+::\+Get\+Harvest\+Apple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_spruce_tree_a4e17bc02c4724ccf68f8ddc6b68b90f4}\label{class_spruce_tree_a4e17bc02c4724ccf68f8ddc6b68b90f4} 
+\index{SpruceTree@{SpruceTree}!GetHarvestCone@{GetHarvestCone}}
+\index{GetHarvestCone@{GetHarvestCone}!SpruceTree@{SpruceTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestCone()}{GetHarvestCone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ Spruce\+Tree\+::\+Get\+Harvest\+Cone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+метод для сбора урожая определяет количество плодов на растении, затем уменьшает его и возвращает указатель std\+::unique\+\_\+ptr$<$\+Cone$>$ на объект плода если количество плодов на растении больше нуля, в противном случает возвращает нулевой указатель. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::unique\+\_\+ptr$<$\+Cone$>$} & указатель на объект плода \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_spruce_tree_aa3ce95356a4e4973f1fc23fa074bae25}\label{class_spruce_tree_aa3ce95356a4e4973f1fc23fa074bae25} 
+\index{SpruceTree@{SpruceTree}!GetHarvestPeach@{GetHarvestPeach}}
+\index{GetHarvestPeach@{GetHarvestPeach}!SpruceTree@{SpruceTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestPeach()}{GetHarvestPeach()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ Spruce\+Tree\+::\+Get\+Harvest\+Peach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_spruce_tree_a531d378b6c6fdd28c34086f6f00b6ec4}\label{class_spruce_tree_a531d378b6c6fdd28c34086f6f00b6ec4} 
+\index{SpruceTree@{SpruceTree}!GetName@{GetName}}
+\index{GetName@{GetName}!SpruceTree@{SpruceTree}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Spruce\+Tree\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий название растения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & название растения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_spruce_tree_aaad971a9f97a014001bd467e717069cd}\label{class_spruce_tree_aaad971a9f97a014001bd467e717069cd} 
+\index{SpruceTree@{SpruceTree}!PrintPlant@{PrintPlant}}
+\index{PrintPlant@{PrintPlant}!SpruceTree@{SpruceTree}}
+\doxysubsubsection{\texorpdfstring{PrintPlant()}{PrintPlant()}}
+{\footnotesize\ttfamily void Spruce\+Tree\+::\+Print\+Plant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+метод выводящий на экран поля класса 
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Plant.\+h\end{DoxyCompactItemize}

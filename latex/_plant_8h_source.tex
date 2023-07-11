@@ -1,0 +1,151 @@
+\doxysection{Plant.\+h}
+\hypertarget{_plant_8h_source}{}\label{_plant_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ \_PLANT\_H\_}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ \_PLANT\_H\_}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Harvest.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plant}{Plant}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ \_plantName;\ \textcolor{comment}{//<\ \_plantName\ вид\ растения}}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ \_size;\ \ \ \ \ \ \textcolor{comment}{//<\ \_size\ размер\ растения}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \_amountHarvest;\ \ \ \ \ \textcolor{comment}{//<\ \_amountHarvest\ количество\ плодов\ на\ растении}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_plant}{Plant}}(\textcolor{keyword}{const}\ std::string\&\ plantName,\ \textcolor{keyword}{const}\ std::string\&\ size,\ \textcolor{keywordtype}{int}\ amountHarvest)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ :\ \_plantName(plantName),\ \_size(size),\ \_amountHarvest(amountHarvest)\ \{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_plant}{Plant}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_plant}{Plant}}\&\ plant)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ :\ \_plantName(plant.\_plantName),}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \_size(plant.\_size),}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \_amountHarvest(plant.\_amountHarvest)\ \{\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_plant}{\string~Plant}}()\ \{\}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{GetPlantName}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_plantName;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::string\ \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{GetSizeOfPlant}}()}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_size;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{GetAmountOfHarvest}}()}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_amountHarvest;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PrintPlant()\ =\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<Apple>\ GetHarvestApple()\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<Peach>\ GetHarvestPeach()\ =\ 0;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr\ <Cone>\ GetHarvestCone()\ =\ 0;}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_apple_tree}{AppleTree}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_plant}{Plant}}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ std::string\ \_name;\ \ \textcolor{comment}{//<\ \_name\ название\ растения}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_apple_tree}{AppleTree}}(std::string\ plantName,\ std::string\ size,\ \textcolor{keywordtype}{int}\ amountHarvest,\ std::string\ name)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_plant}{Plant}}(plantName,\ size,\ amountHarvest),\ \_name(name)\ \{\}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_apple_tree_a101eec92dae18a06baf225bd39a4302b}{PrintPlant}}()}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Вид\ растения:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{GetPlantName}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nРазмер:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{GetSizeOfPlant}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nКоличество\ плодов:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{GetAmountOfHarvest}}()\ <<\ std::endl;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Название\ растения:\ "{}}\ <<\ \_name\ <<\ std::endl;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ std::string\ \mbox{\hyperlink{class_apple_tree_a7f1b5b059e1b17f30152e9bfb50db368}{GetName}}()}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_name;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ std::unique\_ptr<Apple>\ \mbox{\hyperlink{class_apple_tree_a23ceeee7e53533627a6b05f74277811d}{GetHarvestApple}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00097\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ amount\ =\ \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{GetAmountOfHarvest}}()-\/-\/;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<Apple>(\textcolor{stringliteral}{"{}яблоко"{}},\ 0.12f,\ \textcolor{stringliteral}{"{}красный"{}},\ \textcolor{stringliteral}{"{}антоновка"{}});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ std::unique\_ptr<Peach>\ GetHarvestPeach()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00105\ \ \ \ \ std::unique\_ptr\ <Cone>\ GetHarvestCone()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_peach_tree}{PeachTree}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_plant}{Plant}}}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00112\ \ \ \ \ std::string\ \_name;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_peach_tree}{PeachTree}}(std::string\ plantName,\ std::string\ size,\ \textcolor{keywordtype}{int}\ amountHarvest,\ std::string\ name)}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_plant}{Plant}}(plantName,\ size,\ amountHarvest),\ \_name(name)\ \{\}}
+\DoxyCodeLine{00117\ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peach_tree_a4e07315fed869a989d7a5b41d98bad42}{PrintPlant}}()}
+\DoxyCodeLine{00122\ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Вид\ растения:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{GetPlantName}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nРазмер:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{GetSizeOfPlant}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nКоличество\ плодов:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{GetAmountOfHarvest}}()\ <<\ std::endl;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Название\ растения:\ "{}}\ <<\ \_name\ <<\ std::endl;}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ std::string\ \mbox{\hyperlink{class_peach_tree_aa1fecdcb915810e469cda97c7edb5df0}{GetName}}()}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_name;}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00143\ \ \ \ \ std::unique\_ptr<Peach>\ \mbox{\hyperlink{class_peach_tree_a441375c98d0573ca47e646c59125acd6}{GetHarvestPeach}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00144\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ amount\ =\ \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{GetAmountOfHarvest}}()-\/-\/;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<Peach>(\textcolor{stringliteral}{"{}персик"{}},\ 0.15f,\ \textcolor{stringliteral}{"{}красный"{}},\ \textcolor{stringliteral}{"{}принц"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ std::unique\_ptr<Apple>\ GetHarvestApple()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00151\ \ \ \ \ std::unique\_ptr\ <Cone>\ GetHarvestCone()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00152\ \};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_spruce_tree}{SpruceTree}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_plant}{Plant}}}
+\DoxyCodeLine{00155\ \{}
+\DoxyCodeLine{00156\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00157\ \ \ \ \ std::string\ \_name;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_spruce_tree}{SpruceTree}}(std::string\ plantName,\ std::string\ size,\ \textcolor{keywordtype}{int}\ amountHarvest,\ std::string\ name)}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_plant}{Plant}}(plantName,\ size,\ amountHarvest),\ \_name(name)\ \{\}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_spruce_tree_aaad971a9f97a014001bd467e717069cd}{PrintPlant}}()}
+\DoxyCodeLine{00167\ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Вид\ растения:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{GetPlantName}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nРазмер:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{GetSizeOfPlant}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nКоличество\ плодов:\ "{}}\ <<\ \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{GetAmountOfHarvest}}()\ <<\ std::endl;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Название\ растения:\ "{}}\ <<\ \_name\ <<\ std::endl;}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \ \ \ \ std::string\ \mbox{\hyperlink{class_spruce_tree_a531d378b6c6fdd28c34086f6f00b6ec4}{GetName}}()}
+\DoxyCodeLine{00177\ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_name;}
+\DoxyCodeLine{00179\ \ \ \ \ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00188\ \ \ \ \ std::unique\_ptr\ <Cone>\ \mbox{\hyperlink{class_spruce_tree_a4e17bc02c4724ccf68f8ddc6b68b90f4}{GetHarvestCone}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00189\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ amount\ =\ \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{GetAmountOfHarvest}}()-\/-\/;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<Cone>(\textcolor{stringliteral}{"{}шишка"{}},\ 0.05f,\ \textcolor{stringliteral}{"{}коричневый"{}},\ \textcolor{stringliteral}{"{}еловая"{}});}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ std::unique\_ptr<Apple>\ GetHarvestApple()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00197\ \ \ \ \ std::unique\_ptr<Peach>\ GetHarvestPeach()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00198\ \};}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !}}
+\DoxyCodeLine{00202\ }
+
+\end{DoxyCode}

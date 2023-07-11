@@ -1,0 +1,113 @@
+\doxysection{Peach\+Tree Class Reference}
+\hypertarget{class_peach_tree}{}\label{class_peach_tree}\index{PeachTree@{PeachTree}}
+Inheritance diagram for Peach\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_peach_tree}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_peach_tree_a9af20895d7ea0fc056d01820e4c76422}\label{class_peach_tree_a9af20895d7ea0fc056d01820e4c76422} 
+{\bfseries Peach\+Tree} (std\+::string plant\+Name, std\+::string size, int amount\+Harvest, std\+::string name)
+\item 
+void \mbox{\hyperlink{class_peach_tree_a4e07315fed869a989d7a5b41d98bad42}{Print\+Plant}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_peach_tree_aa1fecdcb915810e469cda97c7edb5df0}{Get\+Name}} ()
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ \mbox{\hyperlink{class_peach_tree_a441375c98d0573ca47e646c59125acd6}{Get\+Harvest\+Peach}} () override
+\begin{DoxyCompactList}\small\item\em метод для сбора урожая определяет количество плодов на растении, затем уменьшает его и возвращает указатель std\+::unique\+\_\+ptr$<$\+Peach$>$ на объект плода если количество плодов на растении больше нуля, в противном случает возвращает нулевой указатель. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ \mbox{\hyperlink{class_peach_tree_a9c99cf4e122fbf2db6fbf59de011cc63}{Get\+Harvest\+Apple}} ()
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ \mbox{\hyperlink{class_peach_tree_a3b08c065d111e15253c47d8c9fd6c99b}{Get\+Harvest\+Cone}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Plant} (const std\+::string \&plant\+Name, const std\+::string \&size, int amount\+Harvest)
+\item 
+{\bfseries Plant} (const \mbox{\hyperlink{class_plant}{Plant}} \&plant)
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{Get\+Plant\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{Get\+Size\+Of\+Plant}} ()
+\item 
+int \& \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{Get\+Amount\+Of\+Harvest}} ()
+\item 
+virtual void \mbox{\hyperlink{class_plant_adbe60c4731a8baa0b3c3c3ce798857d2}{Print\+Plant}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ \mbox{\hyperlink{class_plant_a4f544a03facfb58cee5b01375ba149f6}{Get\+Harvest\+Apple}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ \mbox{\hyperlink{class_plant_a4c863577ad427722e19365bedde05824}{Get\+Harvest\+Peach}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ \mbox{\hyperlink{class_plant_ab3de3f15912d4cef1bf3fbafcf7b7be8}{Get\+Harvest\+Cone}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_peach_tree_a9c99cf4e122fbf2db6fbf59de011cc63}\label{class_peach_tree_a9c99cf4e122fbf2db6fbf59de011cc63} 
+\index{PeachTree@{PeachTree}!GetHarvestApple@{GetHarvestApple}}
+\index{GetHarvestApple@{GetHarvestApple}!PeachTree@{PeachTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestApple()}{GetHarvestApple()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ Peach\+Tree\+::\+Get\+Harvest\+Apple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_peach_tree_a3b08c065d111e15253c47d8c9fd6c99b}\label{class_peach_tree_a3b08c065d111e15253c47d8c9fd6c99b} 
+\index{PeachTree@{PeachTree}!GetHarvestCone@{GetHarvestCone}}
+\index{GetHarvestCone@{GetHarvestCone}!PeachTree@{PeachTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestCone()}{GetHarvestCone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ Peach\+Tree\+::\+Get\+Harvest\+Cone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_peach_tree_a441375c98d0573ca47e646c59125acd6}\label{class_peach_tree_a441375c98d0573ca47e646c59125acd6} 
+\index{PeachTree@{PeachTree}!GetHarvestPeach@{GetHarvestPeach}}
+\index{GetHarvestPeach@{GetHarvestPeach}!PeachTree@{PeachTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestPeach()}{GetHarvestPeach()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ Peach\+Tree\+::\+Get\+Harvest\+Peach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+метод для сбора урожая определяет количество плодов на растении, затем уменьшает его и возвращает указатель std\+::unique\+\_\+ptr$<$\+Peach$>$ на объект плода если количество плодов на растении больше нуля, в противном случает возвращает нулевой указатель. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::unique\+\_\+ptr$<$\+Peach$>$} & указатель на объект плода \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_peach_tree_aa1fecdcb915810e469cda97c7edb5df0}\label{class_peach_tree_aa1fecdcb915810e469cda97c7edb5df0} 
+\index{PeachTree@{PeachTree}!GetName@{GetName}}
+\index{GetName@{GetName}!PeachTree@{PeachTree}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Peach\+Tree\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий название растения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & название растения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_peach_tree_a4e07315fed869a989d7a5b41d98bad42}\label{class_peach_tree_a4e07315fed869a989d7a5b41d98bad42} 
+\index{PeachTree@{PeachTree}!PrintPlant@{PrintPlant}}
+\index{PrintPlant@{PrintPlant}!PeachTree@{PeachTree}}
+\doxysubsubsection{\texorpdfstring{PrintPlant()}{PrintPlant()}}
+{\footnotesize\ttfamily void Peach\+Tree\+::\+Print\+Plant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+метод выводящий на экран поля класса 
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Plant.\+h\end{DoxyCompactItemize}

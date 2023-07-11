@@ -1,0 +1,85 @@
+\doxysection{Harvest Class Reference}
+\hypertarget{class_harvest}{}\label{class_harvest}\index{Harvest@{Harvest}}
+
+
+класс урожай (\doxylink{class_harvest}{Harvest}) и его наследники \doxylink{class_apple}{Apple} (яблоко), \doxylink{class_peach}{Peach} (персик) и \doxylink{class_cone}{Cone} (шишка) Класс \doxylink{class_harvest}{Harvest} содержит основные характеристики плода\+: \+\_\+harvest\+Name (вид плода), \+\_\+weight (вес плода), \+\_\+color (цвет плода). Классы наследники содержат поле \+\_\+sort\+Of\+Harvest, т.\+е. сорт плода.  
+
+
+
+
+{\ttfamily \#include $<$Harvest.\+h$>$}
+
+Inheritance diagram for Harvest\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_harvest}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_harvest_aeff751ae8ecec1e8cb8eacd492c9db04}\label{class_harvest_aeff751ae8ecec1e8cb8eacd492c9db04} 
+{\bfseries Harvest} (const std\+::string \&harvest\+Name, float weight, const std\+::string \&color)
+\item 
+std\+::string \mbox{\hyperlink{class_harvest_ae43adf52745a0aa66bb512d9064d3f85}{Get\+Harvest\+Name}} ()
+\item 
+float \mbox{\hyperlink{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026}{Get\+Weight}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_harvest_ad29cd8c20215f43002679848212948a9}{Get\+Color}} ()
+\item 
+virtual void \mbox{\hyperlink{class_harvest_a02f6a7f27ae733e03cbbc5287b1d4a69}{Print\+Harvest}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+класс урожай (\doxylink{class_harvest}{Harvest}) и его наследники \doxylink{class_apple}{Apple} (яблоко), \doxylink{class_peach}{Peach} (персик) и \doxylink{class_cone}{Cone} (шишка) Класс \doxylink{class_harvest}{Harvest} содержит основные характеристики плода\+: \+\_\+harvest\+Name (вид плода), \+\_\+weight (вес плода), \+\_\+color (цвет плода). Классы наследники содержат поле \+\_\+sort\+Of\+Harvest, т.\+е. сорт плода. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_harvest_ad29cd8c20215f43002679848212948a9}\label{class_harvest_ad29cd8c20215f43002679848212948a9} 
+\index{Harvest@{Harvest}!GetColor@{GetColor}}
+\index{GetColor@{GetColor}!Harvest@{Harvest}}
+\doxysubsubsection{\texorpdfstring{GetColor()}{GetColor()}}
+{\footnotesize\ttfamily std\+::string Harvest\+::\+Get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий цвет плода 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & цвет плода \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_harvest_ae43adf52745a0aa66bb512d9064d3f85}\label{class_harvest_ae43adf52745a0aa66bb512d9064d3f85} 
+\index{Harvest@{Harvest}!GetHarvestName@{GetHarvestName}}
+\index{GetHarvestName@{GetHarvestName}!Harvest@{Harvest}}
+\doxysubsubsection{\texorpdfstring{GetHarvestName()}{GetHarvestName()}}
+{\footnotesize\ttfamily std\+::string Harvest\+::\+Get\+Harvest\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий название плода 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & название плода \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026}\label{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026} 
+\index{Harvest@{Harvest}!GetWeight@{GetWeight}}
+\index{GetWeight@{GetWeight}!Harvest@{Harvest}}
+\doxysubsubsection{\texorpdfstring{GetWeight()}{GetWeight()}}
+{\footnotesize\ttfamily float Harvest\+::\+Get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий вес плода 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em float} & число с плавающей точкой, характеризующее вес плода \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_harvest_a02f6a7f27ae733e03cbbc5287b1d4a69}\label{class_harvest_a02f6a7f27ae733e03cbbc5287b1d4a69} 
+\index{Harvest@{Harvest}!PrintHarvest@{PrintHarvest}}
+\index{PrintHarvest@{PrintHarvest}!Harvest@{Harvest}}
+\doxysubsubsection{\texorpdfstring{PrintHarvest()}{PrintHarvest()}}
+{\footnotesize\ttfamily virtual void Harvest\+::\+Print\+Harvest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_apple_ac177ab70159da96cda50d4e2d7e13670}{Apple}}, \mbox{\hyperlink{class_peach_a57c5c6fc2ce230c445781bd199dd735a}{Peach}}, and \mbox{\hyperlink{class_cone_afdff04527e87f61594c6548b0a8beab2}{Cone}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Harvest.\+h\end{DoxyCompactItemize}

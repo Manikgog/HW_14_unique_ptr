@@ -1,0 +1,95 @@
+\doxysection{Fabrica.\+h}
+\hypertarget{_fabrica_8h_source}{}\label{_fabrica_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_FABRICA\_H\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_FABRICA\_H\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}Plant.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fabrica_of_trees}{FabricaOfTrees}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_apple_tree}{AppleTree}}*\ makeAppleTree()\ =\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_peach_tree}{PeachTree}}*\ makePeachTree()\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_spruce_tree}{SpruceTree}}*\ makeSpruceTree()\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_fabrica_of_trees}{\string~FabricaOfTrees}}()\ \{\};}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fabrica_of_apple_trees}{FabricaOfAppleTrees}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_fabrica_of_trees}{FabricaOfTrees}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_apple_tree}{AppleTree}}*\ \_appleTree;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_fabrica_of_apple_trees}{\string~FabricaOfAppleTrees}}()}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}деструктор\ яблони\(\backslash\)n"{}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_appleTree)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \_appleTree;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \_appleTree\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_apple_tree}{AppleTree}}*\ \mbox{\hyperlink{class_fabrica_of_apple_trees_ac4f53f8ec01d191d16b6a2ab744390f5}{makeAppleTree}}()\textcolor{keyword}{override}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ amountOfHarvest\ =\ rand()\ \%\ 20\ +\ 40;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \_appleTree\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_apple_tree}{AppleTree}}(\textcolor{stringliteral}{"{}дерево"{}},\ \textcolor{stringliteral}{"{}средний"{}},\ amountOfHarvest,\ \textcolor{stringliteral}{"{}яблоня"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_appleTree;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_peach_tree}{PeachTree}}*\ makePeachTree()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_spruce_tree}{SpruceTree}}*\ makeSpruceTree()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fabrica_of_peach_trees}{FabricaOfPeachTrees}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_fabrica_of_trees}{FabricaOfTrees}}}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_peach_tree}{PeachTree}}*\ \_peachTree;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_fabrica_of_peach_trees}{\string~FabricaOfPeachTrees}}()}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}деструктор\ персика\(\backslash\)n"{}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_peachTree)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \_peachTree;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \_peachTree\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_peach_tree}{PeachTree}}*\ \mbox{\hyperlink{class_fabrica_of_peach_trees_a19f97c05fe4619f9b889d9c6dcc78ecb}{makePeachTree}}()\textcolor{keyword}{override}}
+\DoxyCodeLine{00074\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ amountOfHarvest\ =\ rand()\ \%\ 10\ +\ 30;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \_peachTree\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_peach_tree}{PeachTree}}(\textcolor{stringliteral}{"{}дерево"{}},\ \textcolor{stringliteral}{"{}средний"{}},\ amountOfHarvest,\ \textcolor{stringliteral}{"{}персиковое\ дерево"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_peachTree;}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_apple_tree}{AppleTree}}*\ makeAppleTree()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{class_spruce_tree}{SpruceTree}}*\ makeSpruceTree()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fabrica_of_spruce_trees}{FabricaOfSpruceTrees}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_fabrica_of_trees}{FabricaOfTrees}}}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00085\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_spruce_tree}{SpruceTree}}*\ \_spruceTree\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_fabrica_of_spruce_trees}{\string~FabricaOfSpruceTrees}}()}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}деструктор\ кедра\(\backslash\)n"{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_spruceTree)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \_spruceTree;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \_spruceTree\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{class_spruce_tree}{SpruceTree}}*\ \mbox{\hyperlink{class_fabrica_of_spruce_trees_a057cae1fc84121d5c84fa69c1dc17c92}{makeSpruceTree}}()\textcolor{keyword}{override}}
+\DoxyCodeLine{00101\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ amountOfHarvest\ =\ rand()\ \%\ 50\ +\ 90;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \_spruceTree\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_spruce_tree}{SpruceTree}}(\textcolor{stringliteral}{"{}дерево"{}},\ \textcolor{stringliteral}{"{}большой"{}},\ amountOfHarvest,\ \textcolor{stringliteral}{"{}кедр"{}});}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_spruceTree;}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{class_apple_tree}{AppleTree}}*\ makeAppleTree()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_peach_tree}{PeachTree}}*\ makePeachTree()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

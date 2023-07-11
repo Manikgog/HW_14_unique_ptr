@@ -1,0 +1,124 @@
+\doxysection{Plant Class Reference}
+\hypertarget{class_plant}{}\label{class_plant}\index{Plant@{Plant}}
+
+
+файл с классом \doxylink{class_plant}{Plant} и его наследниками \doxylink{class_apple_tree}{Apple\+Tree}, \doxylink{class_peach_tree}{Peach\+Tree}, \doxylink{class_spruce_tree}{Spruce\+Tree}.  
+
+
+
+
+{\ttfamily \#include $<$Plant.\+h$>$}
+
+Inheritance diagram for Plant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plant}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_plant_a48b05e4e2dd51df005241c6a8489464a}\label{class_plant_a48b05e4e2dd51df005241c6a8489464a} 
+{\bfseries Plant} (const std\+::string \&plant\+Name, const std\+::string \&size, int amount\+Harvest)
+\item 
+\Hypertarget{class_plant_a54e2b735b442df7f38e5f5a5f48ddc1c}\label{class_plant_a54e2b735b442df7f38e5f5a5f48ddc1c} 
+{\bfseries Plant} (const \mbox{\hyperlink{class_plant}{Plant}} \&plant)
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{Get\+Plant\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{Get\+Size\+Of\+Plant}} ()
+\item 
+int \& \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{Get\+Amount\+Of\+Harvest}} ()
+\item 
+virtual void \mbox{\hyperlink{class_plant_adbe60c4731a8baa0b3c3c3ce798857d2}{Print\+Plant}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ \mbox{\hyperlink{class_plant_a4f544a03facfb58cee5b01375ba149f6}{Get\+Harvest\+Apple}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ \mbox{\hyperlink{class_plant_a4c863577ad427722e19365bedde05824}{Get\+Harvest\+Peach}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ \mbox{\hyperlink{class_plant_ab3de3f15912d4cef1bf3fbafcf7b7be8}{Get\+Harvest\+Cone}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+файл с классом \doxylink{class_plant}{Plant} и его наследниками \doxylink{class_apple_tree}{Apple\+Tree}, \doxylink{class_peach_tree}{Peach\+Tree}, \doxylink{class_spruce_tree}{Spruce\+Tree}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}\label{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5} 
+\index{Plant@{Plant}!GetAmountOfHarvest@{GetAmountOfHarvest}}
+\index{GetAmountOfHarvest@{GetAmountOfHarvest}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{GetAmountOfHarvest()}{GetAmountOfHarvest()}}
+{\footnotesize\ttfamily int \& Plant\+::\+Get\+Amount\+Of\+Harvest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий количество плодов на растении 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em int\&} & количество плодов на растении \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plant_a4f544a03facfb58cee5b01375ba149f6}\label{class_plant_a4f544a03facfb58cee5b01375ba149f6} 
+\index{Plant@{Plant}!GetHarvestApple@{GetHarvestApple}}
+\index{GetHarvestApple@{GetHarvestApple}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{GetHarvestApple()}{GetHarvestApple()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ Plant\+::\+Get\+Harvest\+Apple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_apple_tree_a23ceeee7e53533627a6b05f74277811d}{Apple\+Tree}}.
+
+\Hypertarget{class_plant_ab3de3f15912d4cef1bf3fbafcf7b7be8}\label{class_plant_ab3de3f15912d4cef1bf3fbafcf7b7be8} 
+\index{Plant@{Plant}!GetHarvestCone@{GetHarvestCone}}
+\index{GetHarvestCone@{GetHarvestCone}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{GetHarvestCone()}{GetHarvestCone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ Plant\+::\+Get\+Harvest\+Cone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_spruce_tree_a4e17bc02c4724ccf68f8ddc6b68b90f4}{Spruce\+Tree}}.
+
+\Hypertarget{class_plant_a4c863577ad427722e19365bedde05824}\label{class_plant_a4c863577ad427722e19365bedde05824} 
+\index{Plant@{Plant}!GetHarvestPeach@{GetHarvestPeach}}
+\index{GetHarvestPeach@{GetHarvestPeach}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{GetHarvestPeach()}{GetHarvestPeach()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ Plant\+::\+Get\+Harvest\+Peach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_peach_tree_a441375c98d0573ca47e646c59125acd6}{Peach\+Tree}}.
+
+\Hypertarget{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}\label{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb} 
+\index{Plant@{Plant}!GetPlantName@{GetPlantName}}
+\index{GetPlantName@{GetPlantName}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{GetPlantName()}{GetPlantName()}}
+{\footnotesize\ttfamily std\+::string Plant\+::\+Get\+Plant\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий название вида растения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & вид растения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}\label{class_plant_a1291bfedd36fe70e7bf2eba783012a2a} 
+\index{Plant@{Plant}!GetSizeOfPlant@{GetSizeOfPlant}}
+\index{GetSizeOfPlant@{GetSizeOfPlant}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{GetSizeOfPlant()}{GetSizeOfPlant()}}
+{\footnotesize\ttfamily std\+::string Plant\+::\+Get\+Size\+Of\+Plant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий размер растения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & размер растения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plant_adbe60c4731a8baa0b3c3c3ce798857d2}\label{class_plant_adbe60c4731a8baa0b3c3c3ce798857d2} 
+\index{Plant@{Plant}!PrintPlant@{PrintPlant}}
+\index{PrintPlant@{PrintPlant}!Plant@{Plant}}
+\doxysubsubsection{\texorpdfstring{PrintPlant()}{PrintPlant()}}
+{\footnotesize\ttfamily virtual void Plant\+::\+Print\+Plant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_apple_tree_a101eec92dae18a06baf225bd39a4302b}{Apple\+Tree}}, \mbox{\hyperlink{class_peach_tree_a4e07315fed869a989d7a5b41d98bad42}{Peach\+Tree}}, and \mbox{\hyperlink{class_spruce_tree_aaad971a9f97a014001bd467e717069cd}{Spruce\+Tree}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Plant.\+h\end{DoxyCompactItemize}

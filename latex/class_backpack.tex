@@ -1,0 +1,87 @@
+\doxysection{Backpack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_backpack}{}\label{class_backpack}\index{Backpack$<$ T $>$@{Backpack$<$ T $>$}}
+
+
+класс рюкзак (\doxylink{class_backpack}{Backpack}) для складывания урожая  
+
+
+
+
+{\ttfamily \#include $<$Backpack.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_backpack_a0363d584dba700ec3bc880e2df836019}{Push\+\_\+back}} (const std\+::unique\+\_\+ptr$<$ T $>$ \&harvest)
+\item 
+float \mbox{\hyperlink{class_backpack_a1a11769b78d22884699206029591e5fb}{Get\+Total\+Weight}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{class_backpack_ab917c8c44e593105b09f787d12c28469}{Get\+Size}} ()
+\item 
+T \mbox{\hyperlink{class_backpack_a249a44f370ba648f62086402edca45af}{Get\+Harvest}} ()
+\begin{DoxyCompactList}\small\item\em метод для получения объектов типа T из класса \doxylink{class_backpack}{Backpack} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Backpack$<$ T $>$}
+класс рюкзак (\doxylink{class_backpack}{Backpack}) для складывания урожая 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_backpack_a249a44f370ba648f62086402edca45af}\label{class_backpack_a249a44f370ba648f62086402edca45af} 
+\index{Backpack$<$ T $>$@{Backpack$<$ T $>$}!GetHarvest@{GetHarvest}}
+\index{GetHarvest@{GetHarvest}!Backpack$<$ T $>$@{Backpack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetHarvest()}{GetHarvest()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_backpack}{Backpack}}$<$ T $>$\+::\+Get\+Harvest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+метод для получения объектов типа T из класса \doxylink{class_backpack}{Backpack} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em объект} & типа Т \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_backpack_ab917c8c44e593105b09f787d12c28469}\label{class_backpack_ab917c8c44e593105b09f787d12c28469} 
+\index{Backpack$<$ T $>$@{Backpack$<$ T $>$}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!Backpack$<$ T $>$@{Backpack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_backpack}{Backpack}}$<$ T $>$\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод для определения количества плодов в рюкзаке 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em size\+\_\+t} & целое число \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_backpack_a1a11769b78d22884699206029591e5fb}\label{class_backpack_a1a11769b78d22884699206029591e5fb} 
+\index{Backpack$<$ T $>$@{Backpack$<$ T $>$}!GetTotalWeight@{GetTotalWeight}}
+\index{GetTotalWeight@{GetTotalWeight}!Backpack$<$ T $>$@{Backpack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetTotalWeight()}{GetTotalWeight()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+float \mbox{\hyperlink{class_backpack}{Backpack}}$<$ T $>$\+::\+Get\+Total\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод для определения полного веса рюкзака 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em float} & число с плавающей запятой \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_backpack_a0363d584dba700ec3bc880e2df836019}\label{class_backpack_a0363d584dba700ec3bc880e2df836019} 
+\index{Backpack$<$ T $>$@{Backpack$<$ T $>$}!Push\_back@{Push\_back}}
+\index{Push\_back@{Push\_back}!Backpack$<$ T $>$@{Backpack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Push\_back()}{Push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_backpack}{Backpack}}$<$ T $>$\+::\+Push\+\_\+back (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ T $>$ \&}]{harvest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод для добавления в вектор указателей. Создаёт новый указатель и добавляет его в вектор. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em harvest} & указатель на объект \doxylink{class_apple}{Apple}, \doxylink{class_peach}{Peach} или \doxylink{class_cone}{Cone} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Backpack.\+h\end{DoxyCompactItemize}

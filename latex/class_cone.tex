@@ -1,0 +1,60 @@
+\doxysection{Cone Class Reference}
+\hypertarget{class_cone}{}\label{class_cone}\index{Cone@{Cone}}
+Inheritance diagram for Cone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cone}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cone_ae479e60c6e09a94b7474b6692a541611}\label{class_cone_ae479e60c6e09a94b7474b6692a541611} 
+{\bfseries Cone} (std\+::string harvest\+Name, float weight, std\+::string color, std\+::string sort\+Of\+Harvest)
+\item 
+std\+::string \mbox{\hyperlink{class_cone_a71736cb49121e1d4249d1eba24b877cc}{Get\+Sort\+Of\+Harvest}} ()
+\item 
+void \mbox{\hyperlink{class_cone_afdff04527e87f61594c6548b0a8beab2}{Print\+Harvest}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_harvest}{Harvest}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Harvest} (const std\+::string \&harvest\+Name, float weight, const std\+::string \&color)
+\item 
+std\+::string \mbox{\hyperlink{class_harvest_ae43adf52745a0aa66bb512d9064d3f85}{Get\+Harvest\+Name}} ()
+\item 
+float \mbox{\hyperlink{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026}{Get\+Weight}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_harvest_ad29cd8c20215f43002679848212948a9}{Get\+Color}} ()
+\item 
+virtual void \mbox{\hyperlink{class_harvest_a02f6a7f27ae733e03cbbc5287b1d4a69}{Print\+Harvest}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cone_a71736cb49121e1d4249d1eba24b877cc}\label{class_cone_a71736cb49121e1d4249d1eba24b877cc} 
+\index{Cone@{Cone}!GetSortOfHarvest@{GetSortOfHarvest}}
+\index{GetSortOfHarvest@{GetSortOfHarvest}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{GetSortOfHarvest()}{GetSortOfHarvest()}}
+{\footnotesize\ttfamily std\+::string Cone\+::\+Get\+Sort\+Of\+Harvest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод для возвращения сорта шишки 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & сорт шишки \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cone_afdff04527e87f61594c6548b0a8beab2}\label{class_cone_afdff04527e87f61594c6548b0a8beab2} 
+\index{Cone@{Cone}!PrintHarvest@{PrintHarvest}}
+\index{PrintHarvest@{PrintHarvest}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{PrintHarvest()}{PrintHarvest()}}
+{\footnotesize\ttfamily void Cone\+::\+Print\+Harvest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+метод для вывода на экран полей класса \doxylink{class_cone}{Cone} и его родителя \doxylink{class_harvest}{Harvest} 
+
+Implements \mbox{\hyperlink{class_harvest}{Harvest}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Harvest.\+h\end{DoxyCompactItemize}

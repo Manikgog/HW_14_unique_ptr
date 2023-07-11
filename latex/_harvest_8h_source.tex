@@ -1,0 +1,117 @@
+\doxysection{Harvest.\+h}
+\hypertarget{_harvest_8h_source}{}\label{_harvest_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_HARVEST\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_HARVEST\_H\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_harvest}{Harvest}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ \_harvestName;\ \ \ \textcolor{comment}{//<\ \_harvestName\ название\ плода}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ \_weight;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//<\ \_weight\ вес\ плода}}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \_color;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//<\ \_color\ цвет\ плода}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_harvest}{Harvest}}(\textcolor{keyword}{const}\ std::string\&\ harvestName,\ \textcolor{keywordtype}{float}\ weight,\ \textcolor{keyword}{const}\ std::string\&\ color)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ :\ \_harvestName(harvestName),\ \_weight(weight),\ \_color(color)\ \{\}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_harvest}{\string~Harvest}}()\ \{\}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{class_harvest_ae43adf52745a0aa66bb512d9064d3f85}{GetHarvestName}}()}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_harvestName;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026}{GetWeight}}()}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_weight;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ \mbox{\hyperlink{class_harvest_ad29cd8c20215f43002679848212948a9}{GetColor}}()}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_color;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PrintHarvest()\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_apple}{Apple}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_harvest}{Harvest}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ std::string\ \_sortOfHarvest;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_apple}{Apple}}()\ :\ \mbox{\hyperlink{class_harvest}{Harvest}}(\textcolor{stringliteral}{"{}"{}},\ 0.0f,\ \textcolor{stringliteral}{"{}"{}}),\ \_sortOfHarvest(\textcolor{stringliteral}{"{}"{}})\ \{\}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_apple}{Apple}}(std::string\ harvestName,\ \textcolor{keywordtype}{float}\ weight,\ std::string\ color,\ std::string\ sortOfHarvest)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_harvest}{Harvest}}(harvestName,\ weight,\ color),\ \_sortOfHarvest(sortOfHarvest)\ \{\}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ std::string\ \mbox{\hyperlink{class_apple_aac6e0f7cb53338de581f6cb9c4aeee12}{GetSortOfHarvest}}()}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_sortOfHarvest;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_apple_ac177ab70159da96cda50d4e2d7e13670}{PrintHarvest}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00080\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Вид\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_ae43adf52745a0aa66bb512d9064d3f85}{GetHarvestName}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nВес\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026}{GetWeight}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nЦвет\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_ad29cd8c20215f43002679848212948a9}{GetColor}}()\ <<\ std::endl;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Сорт:\ "{}}\ <<\ \_sortOfHarvest\ <<\ std::endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_peach}{Peach}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_harvest}{Harvest}}}
+\DoxyCodeLine{00088\ \{}
+\DoxyCodeLine{00089\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00090\ \ \ \ \ std::string\ \_sortOfHarvest;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{class_peach}{Peach}}()\ :\ \mbox{\hyperlink{class_harvest}{Harvest}}(\textcolor{stringliteral}{"{}"{}},\ 0.0f,\ \textcolor{stringliteral}{"{}"{}}),\ \_sortOfHarvest(\textcolor{stringliteral}{"{}"{}})\ \{\}}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_peach}{Peach}}(std::string\ harvestName,\ \textcolor{keywordtype}{float}\ weight,\ std::string\ color,\ std::string\ sortOfHarvest)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_harvest}{Harvest}}(harvestName,\ weight,\ color),\ \_sortOfHarvest(sortOfHarvest)\ \{\}}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ std::string\ \mbox{\hyperlink{class_peach_ae10e0801d5a2d4fcdc9321de7b9c08a5}{GetSortOfHarvest}}()}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_sortOfHarvest;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peach_a57c5c6fc2ce230c445781bd199dd735a}{PrintHarvest}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00110\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Вид\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_ae43adf52745a0aa66bb512d9064d3f85}{GetHarvestName}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nВес\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026}{GetWeight}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nЦвет\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_ad29cd8c20215f43002679848212948a9}{GetColor}}()\ <<\ std::endl;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Сорт:\ "{}}\ <<\ \_sortOfHarvest\ <<\ std::endl;}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cone}{Cone}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_harvest}{Harvest}}}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00120\ \ \ \ \ std::string\ \_sortOfHarvest;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_cone}{Cone}}()\ :\ \mbox{\hyperlink{class_harvest}{Harvest}}(\textcolor{stringliteral}{"{}"{}},\ 0.0f,\ \textcolor{stringliteral}{"{}"{}}),\ \_sortOfHarvest(\textcolor{stringliteral}{"{}"{}})\ \{\}}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_cone}{Cone}}(std::string\ harvestName,\ \textcolor{keywordtype}{float}\ weight,\ std::string\ color,\ std::string\ sortOfHarvest)}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_harvest}{Harvest}}(harvestName,\ weight,\ color),\ \_sortOfHarvest(sortOfHarvest)\ \{\}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ std::string\ \mbox{\hyperlink{class_cone_a71736cb49121e1d4249d1eba24b877cc}{GetSortOfHarvest}}()}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_sortOfHarvest;}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cone_afdff04527e87f61594c6548b0a8beab2}{PrintHarvest}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00140\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Вид\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_ae43adf52745a0aa66bb512d9064d3f85}{GetHarvestName}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nВес\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_a5d521dc3b7b7c18489f7858cdfe54026}{GetWeight}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nЦвет\ плода:\ "{}}\ <<\ \mbox{\hyperlink{class_harvest_ad29cd8c20215f43002679848212948a9}{GetColor}}()\ <<\ std::endl;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Сорт:\ "{}}\ <<\ \_sortOfHarvest\ <<\ std::endl;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_HARVEST\_H\_}}
+\DoxyCodeLine{00150\ }
+
+\end{DoxyCode}

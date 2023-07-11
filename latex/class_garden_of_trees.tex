@@ -1,0 +1,60 @@
+\doxysection{Garden\+Of\+Trees\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_garden_of_trees}{}\label{class_garden_of_trees}\index{GardenOfTrees$<$ T $>$@{GardenOfTrees$<$ T $>$}}
+
+
+класс Garden (Сад) для хранения указателей на объекты растений (\doxylink{class_apple_tree}{Apple\+Tree}, \doxylink{class_peach_tree}{Peach\+Tree}, \doxylink{class_spruce_tree}{Spruce\+Tree})  
+
+
+
+
+{\ttfamily \#include $<$Garden.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_garden_of_trees_a0ce9150a30cbfcf8b7d6a2228814b19d}{Push\+\_\+back}} (T \texorpdfstring{$\ast$}{*}plant)
+\item 
+std\+::unique\+\_\+ptr$<$ T $>$ \& \mbox{\hyperlink{class_garden_of_trees_ae8805e4b33f4f3ede2948465ddb2e46c}{Get\+Plants}} (size\+\_\+t index)
+\item 
+\Hypertarget{class_garden_of_trees_aa8cc43c22ac543bcca5cd4f70729b287}\label{class_garden_of_trees_aa8cc43c22ac543bcca5cd4f70729b287} 
+size\+\_\+t {\bfseries Size} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Garden\+Of\+Trees$<$ T $>$}
+класс Garden (Сад) для хранения указателей на объекты растений (\doxylink{class_apple_tree}{Apple\+Tree}, \doxylink{class_peach_tree}{Peach\+Tree}, \doxylink{class_spruce_tree}{Spruce\+Tree}) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_garden_of_trees_ae8805e4b33f4f3ede2948465ddb2e46c}\label{class_garden_of_trees_ae8805e4b33f4f3ede2948465ddb2e46c} 
+\index{GardenOfTrees$<$ T $>$@{GardenOfTrees$<$ T $>$}!GetPlants@{GetPlants}}
+\index{GetPlants@{GetPlants}!GardenOfTrees$<$ T $>$@{GardenOfTrees$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetPlants()}{GetPlants()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::unique\+\_\+ptr$<$ T $>$ \& \mbox{\hyperlink{class_garden_of_trees}{Garden\+Of\+Trees}}$<$ T $>$\+::\+Get\+Plants (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод для обеспечения доступа к вектору умных указателей std\+::unique\+\_\+ptr$<$\+T$>$ по переданному индексу 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & целое число, которые соответствует индексу вектора умных указателей \\
+\hline
+\mbox{\texttt{ out}}  & {\em std\+::unique\+\_\+ptr$<$\+T$>$\&} & ссылка на указатель \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_garden_of_trees_a0ce9150a30cbfcf8b7d6a2228814b19d}\label{class_garden_of_trees_a0ce9150a30cbfcf8b7d6a2228814b19d} 
+\index{GardenOfTrees$<$ T $>$@{GardenOfTrees$<$ T $>$}!Push\_back@{Push\_back}}
+\index{Push\_back@{Push\_back}!GardenOfTrees$<$ T $>$@{GardenOfTrees$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Push\_back()}{Push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_garden_of_trees}{Garden\+Of\+Trees}}$<$ T $>$\+::\+Push\+\_\+back (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{plant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод для добавления растения в сад (для добавления указателя std\+::unique\+\_\+ptr$<$\+T$>$ на объект типа Т (\doxylink{class_apple_tree}{Apple\+Tree}, \doxylink{class_peach_tree}{Peach\+Tree} или \doxylink{class_spruce_tree}{Spruce\+Tree}) в вектор \+\_\+plants 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em plant} & указатель std\+::unique\+\_\+ptr$<$\+T$>$ на оьъект типа Т (\doxylink{class_apple_tree}{Apple\+Tree}, \doxylink{class_peach_tree}{Peach\+Tree} или \doxylink{class_spruce_tree}{Spruce\+Tree}) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Garden.\+h\end{DoxyCompactItemize}

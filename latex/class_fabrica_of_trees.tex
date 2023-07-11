@@ -1,0 +1,67 @@
+\doxysection{Fabrica\+Of\+Trees Class Reference}
+\hypertarget{class_fabrica_of_trees}{}\label{class_fabrica_of_trees}\index{FabricaOfTrees@{FabricaOfTrees}}
+
+
+файл содержит абстрактный класс \doxylink{class_fabrica_of_trees}{Fabrica\+Of\+Trees} и три класса наследника классы \doxylink{class_fabrica_of_trees}{Fabrica\+Of\+Trees} и его наследники служат для создания объектов и возвращения указателей на них. Объекты создаются с заранее заданными постоянными характеристиками\+: plant\+Name -\/ вид растения (дерево, куст и т.\+п.), size -\/ условный размер (средний, большой, маленький), amount\+Of\+Harvest -\/ количество урожая в шт., name -\/ название растения (яблоня, персиковое дерево, кедр). Количество урожая (amount\+Of\+Harvest) задаётся случайным образом в заданных пределах.  
+
+
+
+
+{\ttfamily \#include $<$Fabrica.\+h$>$}
+
+Inheritance diagram for Fabrica\+Of\+Trees\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fabrica_of_trees}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_apple_tree}{Apple\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_fabrica_of_trees_a2f43a4a7ef606580a2f4e77e4da78347}{make\+Apple\+Tree}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_peach_tree}{Peach\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_fabrica_of_trees_a8b143f34962fb9ddf7a32daf8f71199a}{make\+Peach\+Tree}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_spruce_tree}{Spruce\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_fabrica_of_trees_a252bbe202ee9edbe893d235a0d394f61}{make\+Spruce\+Tree}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+файл содержит абстрактный класс \doxylink{class_fabrica_of_trees}{Fabrica\+Of\+Trees} и три класса наследника классы \doxylink{class_fabrica_of_trees}{Fabrica\+Of\+Trees} и его наследники служат для создания объектов и возвращения указателей на них. Объекты создаются с заранее заданными постоянными характеристиками\+: plant\+Name -\/ вид растения (дерево, куст и т.\+п.), size -\/ условный размер (средний, большой, маленький), amount\+Of\+Harvest -\/ количество урожая в шт., name -\/ название растения (яблоня, персиковое дерево, кедр). Количество урожая (amount\+Of\+Harvest) задаётся случайным образом в заданных пределах. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_fabrica_of_trees_a2f43a4a7ef606580a2f4e77e4da78347}\label{class_fabrica_of_trees_a2f43a4a7ef606580a2f4e77e4da78347} 
+\index{FabricaOfTrees@{FabricaOfTrees}!makeAppleTree@{makeAppleTree}}
+\index{makeAppleTree@{makeAppleTree}!FabricaOfTrees@{FabricaOfTrees}}
+\doxysubsubsection{\texorpdfstring{makeAppleTree()}{makeAppleTree()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_apple_tree}{Apple\+Tree}} \texorpdfstring{$\ast$}{*} Fabrica\+Of\+Trees\+::make\+Apple\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_fabrica_of_apple_trees_ac4f53f8ec01d191d16b6a2ab744390f5}{Fabrica\+Of\+Apple\+Trees}}.
+
+\Hypertarget{class_fabrica_of_trees_a8b143f34962fb9ddf7a32daf8f71199a}\label{class_fabrica_of_trees_a8b143f34962fb9ddf7a32daf8f71199a} 
+\index{FabricaOfTrees@{FabricaOfTrees}!makePeachTree@{makePeachTree}}
+\index{makePeachTree@{makePeachTree}!FabricaOfTrees@{FabricaOfTrees}}
+\doxysubsubsection{\texorpdfstring{makePeachTree()}{makePeachTree()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_peach_tree}{Peach\+Tree}} \texorpdfstring{$\ast$}{*} Fabrica\+Of\+Trees\+::make\+Peach\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_fabrica_of_peach_trees_a19f97c05fe4619f9b889d9c6dcc78ecb}{Fabrica\+Of\+Peach\+Trees}}.
+
+\Hypertarget{class_fabrica_of_trees_a252bbe202ee9edbe893d235a0d394f61}\label{class_fabrica_of_trees_a252bbe202ee9edbe893d235a0d394f61} 
+\index{FabricaOfTrees@{FabricaOfTrees}!makeSpruceTree@{makeSpruceTree}}
+\index{makeSpruceTree@{makeSpruceTree}!FabricaOfTrees@{FabricaOfTrees}}
+\doxysubsubsection{\texorpdfstring{makeSpruceTree()}{makeSpruceTree()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_spruce_tree}{Spruce\+Tree}} \texorpdfstring{$\ast$}{*} Fabrica\+Of\+Trees\+::make\+Spruce\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_fabrica_of_spruce_trees_a057cae1fc84121d5c84fa69c1dc17c92}{Fabrica\+Of\+Spruce\+Trees}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fabrica.\+h\end{DoxyCompactItemize}

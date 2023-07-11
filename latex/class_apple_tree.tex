@@ -1,0 +1,113 @@
+\doxysection{Apple\+Tree Class Reference}
+\hypertarget{class_apple_tree}{}\label{class_apple_tree}\index{AppleTree@{AppleTree}}
+Inheritance diagram for Apple\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_apple_tree}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_apple_tree_aab685f9629037de067344b816d22fc41}\label{class_apple_tree_aab685f9629037de067344b816d22fc41} 
+{\bfseries Apple\+Tree} (std\+::string plant\+Name, std\+::string size, int amount\+Harvest, std\+::string name)
+\item 
+void \mbox{\hyperlink{class_apple_tree_a101eec92dae18a06baf225bd39a4302b}{Print\+Plant}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_apple_tree_a7f1b5b059e1b17f30152e9bfb50db368}{Get\+Name}} ()
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ \mbox{\hyperlink{class_apple_tree_a23ceeee7e53533627a6b05f74277811d}{Get\+Harvest\+Apple}} () override
+\begin{DoxyCompactList}\small\item\em метод для сбора урожая определяет количество плодов на растении, затем уменьшает его и возвращает указатель std\+::unique\+\_\+ptr$<$\+Apple$>$ на объект плода если количество плодов на растении больше нуля, в противном случает возвращает нулевой указатель. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ \mbox{\hyperlink{class_apple_tree_a163f165f90bcd95c22c1cd9344b4f326}{Get\+Harvest\+Peach}} ()
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ \mbox{\hyperlink{class_apple_tree_a7ed0bdc956202b8d62d1d3cb0ab38d9c}{Get\+Harvest\+Cone}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Plant} (const std\+::string \&plant\+Name, const std\+::string \&size, int amount\+Harvest)
+\item 
+{\bfseries Plant} (const \mbox{\hyperlink{class_plant}{Plant}} \&plant)
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a3d65ac4e038c49bb3dd6742f3182dabb}{Get\+Plant\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_plant_a1291bfedd36fe70e7bf2eba783012a2a}{Get\+Size\+Of\+Plant}} ()
+\item 
+int \& \mbox{\hyperlink{class_plant_adda88f03d3a62bb8fc9ce5a70871dbf5}{Get\+Amount\+Of\+Harvest}} ()
+\item 
+virtual void \mbox{\hyperlink{class_plant_adbe60c4731a8baa0b3c3c3ce798857d2}{Print\+Plant}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ \mbox{\hyperlink{class_plant_a4f544a03facfb58cee5b01375ba149f6}{Get\+Harvest\+Apple}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ \mbox{\hyperlink{class_plant_a4c863577ad427722e19365bedde05824}{Get\+Harvest\+Peach}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ \mbox{\hyperlink{class_plant_ab3de3f15912d4cef1bf3fbafcf7b7be8}{Get\+Harvest\+Cone}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_apple_tree_a23ceeee7e53533627a6b05f74277811d}\label{class_apple_tree_a23ceeee7e53533627a6b05f74277811d} 
+\index{AppleTree@{AppleTree}!GetHarvestApple@{GetHarvestApple}}
+\index{GetHarvestApple@{GetHarvestApple}!AppleTree@{AppleTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestApple()}{GetHarvestApple()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_apple}{Apple}} $>$ Apple\+Tree\+::\+Get\+Harvest\+Apple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+метод для сбора урожая определяет количество плодов на растении, затем уменьшает его и возвращает указатель std\+::unique\+\_\+ptr$<$\+Apple$>$ на объект плода если количество плодов на растении больше нуля, в противном случает возвращает нулевой указатель. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::unique\+\_\+ptr$<$\+Apple$>$} & указатель на объект плода \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_apple_tree_a7ed0bdc956202b8d62d1d3cb0ab38d9c}\label{class_apple_tree_a7ed0bdc956202b8d62d1d3cb0ab38d9c} 
+\index{AppleTree@{AppleTree}!GetHarvestCone@{GetHarvestCone}}
+\index{GetHarvestCone@{GetHarvestCone}!AppleTree@{AppleTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestCone()}{GetHarvestCone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_cone}{Cone}} $>$ Apple\+Tree\+::\+Get\+Harvest\+Cone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_apple_tree_a163f165f90bcd95c22c1cd9344b4f326}\label{class_apple_tree_a163f165f90bcd95c22c1cd9344b4f326} 
+\index{AppleTree@{AppleTree}!GetHarvestPeach@{GetHarvestPeach}}
+\index{GetHarvestPeach@{GetHarvestPeach}!AppleTree@{AppleTree}}
+\doxysubsubsection{\texorpdfstring{GetHarvestPeach()}{GetHarvestPeach()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_peach}{Peach}} $>$ Apple\+Tree\+::\+Get\+Harvest\+Peach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_apple_tree_a7f1b5b059e1b17f30152e9bfb50db368}\label{class_apple_tree_a7f1b5b059e1b17f30152e9bfb50db368} 
+\index{AppleTree@{AppleTree}!GetName@{GetName}}
+\index{GetName@{GetName}!AppleTree@{AppleTree}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Apple\+Tree\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+метод возвращающий название растения 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em std\+::string} & название растения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_apple_tree_a101eec92dae18a06baf225bd39a4302b}\label{class_apple_tree_a101eec92dae18a06baf225bd39a4302b} 
+\index{AppleTree@{AppleTree}!PrintPlant@{PrintPlant}}
+\index{PrintPlant@{PrintPlant}!AppleTree@{AppleTree}}
+\doxysubsubsection{\texorpdfstring{PrintPlant()}{PrintPlant()}}
+{\footnotesize\ttfamily void Apple\+Tree\+::\+Print\+Plant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+метод выводящий на экран поля класса 
+
+Implements \mbox{\hyperlink{class_plant}{Plant}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Plant.\+h\end{DoxyCompactItemize}
